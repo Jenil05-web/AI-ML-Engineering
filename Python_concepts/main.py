@@ -22,4 +22,4 @@ def generate_text(request: PromptRequest): # this defines a POST endpoint at the
 
 # similarly
 # @app.get("/teacher") ""this is an endpoint that listens for GET requests at the "/teacher" URL. When a GET request is made to this endpoint, the function teacher() is called, which returns a JSON response with the message "Hello, Teacher!".
-# now to run this code and to get the web interface we will write uvicorn main:app --reload in the terminal and then we can access the web interface at http://
+# now to run this code and to get the web interface we will write "uvicorn main:app --reload" in the terminal and then we can access the web interface at http://

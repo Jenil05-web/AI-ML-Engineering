@@ -16,3 +16,5 @@ def fetch_random_quote(url):
     
 quote = fetch_random_quote(url)
 print(quote)
+
+# this is an example of getting random quotes through api calls 
