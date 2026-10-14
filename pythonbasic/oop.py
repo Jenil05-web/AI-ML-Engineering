@@ -1,6 +1,6 @@
 # PYTHON (OOP)
 
-# object = A BUndle of related attributes (variables) and methods (functions)
+# object = A Bundle of related attributes (variables) and methods (functions)
  # ex . phone , book , cup
 # You need a "class" to create many objects
 
