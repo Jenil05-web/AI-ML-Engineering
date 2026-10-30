@@ -9,7 +9,7 @@
 class Car :
     Car_name = "ABC car" # Class attribute
 
-    def __init__(self , model , year , color,for_sale): # Parameterised Constructor ( because we passed values in it )
+    def __init__(self , model , year , color, for_sale): # Parameterised Constructor ( because we passed values in it )
        self.model = model
        self.year = year
        self.color = color
@@ -23,12 +23,7 @@ class Car :
        print(car1.model)
        print(car2.year)
        print(car1.color)
-
-       
-        
-        # Methods : methods are functions that belongs to objects
+    # Methods : methods are functions that belongs to objects
 
 
 
-
-        

@@ -10,5 +10,3 @@ else:
 
 
     """ [::-1] , this is the core logic for reversing the string."""
-
-    

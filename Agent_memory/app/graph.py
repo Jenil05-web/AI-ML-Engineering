@@ -30,4 +30,3 @@ graph = builder.compile(
     checkpointer=checkpointer
 )
 
-
