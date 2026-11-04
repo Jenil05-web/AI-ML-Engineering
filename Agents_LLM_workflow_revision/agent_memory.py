@@ -54,3 +54,59 @@ response2 = graph.invoke(
 )
 
 print(response2["messages"][-1].content)
+
+""""""
+
+"""Managing multiple conversations using Thread IDs"""
+
+
+# Conversation for User A
+config_a = {
+    "configurable":{
+        "thread_id": "user_A"
+    }
+}
+
+# Conversation for User B
+
+config_b ={
+    "configurable":{
+        "thread_id": "user_B"
+    }
+}
+
+# User A's first message
+
+graph.invoke({
+    "messages":[
+        HumanMessage(content = "Hello, I am Alex")
+    ]
+},
+config = config_a)
+
+# User B's first message
+
+graph.invoke({
+    "messages":[
+        HumanMessage(content="My name is John")
+    ]
+},
+config = config_b)
+
+# Ask for user A name
+
+response_a = graph.invoke({"messages":[
+    HumanMessage(content="What is my name ?")
+]}, config = config_a)
+
+print("User A:", response_a["messages"][-1].content)
+
+# Ask User B question
+
+response_b = graph.invoke({
+    "messages":[
+        HumanMessage(content="What is my name ?")
+    ]
+}, config = config_b) 
+
+print("User B:", response_b["messages"][-1].content)

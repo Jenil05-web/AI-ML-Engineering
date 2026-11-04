@@ -49,6 +49,17 @@ Nodes return state updates using dictionaries
 Short Term Memory - remembers message within an conversation
 Long Term Memory - Retains information across different conversations
 
+Short Term Memory :
+
+memory = InMemorySaver() , it is used in langgrapgh for managing the memory of chats in conversation.
+
+config = {
+    "configurable": {
+        "thread_id": "user_1"
+    }
+}
+ Unique thread ID is given to map the conversation later on
+
 
 
 
