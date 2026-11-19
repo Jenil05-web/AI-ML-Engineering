@@ -9,7 +9,7 @@ In sequential workflows, execution follows a fixed path.
 In parallel workflows, multiple branches execute together.
 
 # Conditional Workflow
-"How it Works: If condition $X$ is met, go to Module A; else if condition $Y$ is met, go to Module B."
+"How it Works: If condition X is met, go to Module A; else if condition Y is met, go to Module B."
 
 In conditional workflows, the next step is selected based on a condition or decision.
 
@@ -49,9 +49,9 @@ Nodes return state updates using dictionaries
 Short Term Memory - remembers message within an conversation
 Long Term Memory - Retains information across different conversations
 
-Short Term Memory :
+ # "Short Term Memory :"
 
-memory = InMemorySaver() , it is used in langgrapgh for managing the memory of chats in conversation.
+memory = InMemorySaver() , it is used in langgraph for managing the memory of chats in conversation.
 
 config = {
     "configurable": {
@@ -59,6 +59,34 @@ config = {
     }
 }
  Unique thread ID is given to map the conversation later on
+
+# "Long Term Memory : "
+
+InMemoryStore() -> used for long term memory in langgraph.
+
+# Human in the Loop :
+ interrupt() — pauses the workflow and asks for human input.
+ Execute → Interrupt → Human decision → Resume → Continue.
+
+# Structured Outputs — get predictable, validated responses from LLMs.
+response in a predictable format so our Python application can use individual values.
+We'll use Pydantic with LangChain's with_structured_output()
+Enums, Literal Types and Validation
+1. The problem we're solving
+Suppose we ask an LLM to classify a customer query.
+
+We want the output category to be one of:
+- Billing
+- Technical
+- General
+But the LLM might return "Payment Issue", "Technical Support" or "Other".
+
+Our application may expect only the three predefined categories.
+
+We need to enforce the allowed values.
+
+for this purpose we use "Literal"
+
 
 
 
